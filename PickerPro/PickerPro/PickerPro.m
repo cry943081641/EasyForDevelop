@@ -25,6 +25,11 @@
 
 }
 
+- (void)dealloc {
+    self.picker.delegate = nil;
+    self.picker.dataSource = nil;
+}
+
 - (void)setDefaultRow:(NSInteger)defaultRow {
     _defaultRow = defaultRow;
     
